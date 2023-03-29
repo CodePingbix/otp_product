@@ -1,0 +1,143 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+:where(.container, form, .input-field, header) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background: #fff;
+  padding: 30px 65px;
+  border-radius: 15px;
+  row-gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 80px;
+}
+.container header {
+  height: 65px;
+  width: 65px;
+  background: #0c7811;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 50%;
+}
+.container h4 {
+  font-size: 1.25rem;
+  color: rgb(43, 12, 87);
+  font-weight: 500;
+}
+form .input-field {
+  flex-direction: row;
+  column-gap: 10px;
+}
+.input-field input {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 2px solid rgb(18, 111, 74);
+}
+.input-field input:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: #333;
+}
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+  display: none;
+}
+form button {
+  margin-top: 25px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  pointer-events: none;
+  background: #0c7811;
+  transition: all 0.2s ease;
+}
+form button.active {
+  background: #3f1569;
+  pointer-events: auto;
+}
+form button:hover {
+  background: #0e4bf1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  margin-top: 70px;
+  margin-left: 50px;
+}
+h4 {
+  margin-left: 5px;
+}
+.title1 {
+  margin-left: 60px;
+}
+.btn-block {
+  margin-top: 10px;
+  text-align: center;
+}
+.button1 {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0a923e;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.button1:hover {
+  background: #7529a8;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .title1 {
+    margin-left: 10px;
+    text-align: center;
+  }
+  h4 {
+    margin-right: 10px;
+    text-align: center;
+  }
+}

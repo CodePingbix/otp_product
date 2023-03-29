@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTP Verification</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <img
+          src="/images/Enter OTP-bro.png"
+          style="height: 70%; width: 70%"
+          class="img1"
+        />
+        <div class="title1">
+          <h2 style="color: #3f1569">Tools that Drive Users to Whatsapp</h2>
+          <h4 style="color: black">
+            Create Unlimited FREE Whatsapp Links and URL
+          </h4>
+        </div>
+      </div>
+      <div class="column">
+        <div class="container">
+          <header>
+            <i class="bx bxs-check-shield"></i>
+          </header>
+          <h4>Enter OTP Code</h4>
+          <h6>Enter the code we just send on your WhatsApp Number</h6>
+          <form action="/verify-otp" method="post">
+            <div class="input-field">
+              <input type="number" name="box1" />
+              <input type="number" name="box2" />
+              <input type="number" name="box3" />
+              <input type="number" name="box4" />
+              <input type="number" name="box5" />
+              <input type="number" name="box6" />
+            </div>
+
+            <p style="color: green; font-size: 12px; margin-top: 10px">
+              <span id="countdowntimer"
+                ><div id="some_div" style="color: green"></div>
+              </span>
+            </p>
+            <div class="btn-block">
+              <input class="button1" type="submit" value="Verify OTP" />
+            </div>
+          </form>
+          <h6>Don't receive the code?</h6>
+          <h5 style="margin-top: -15px; color: rgb(172, 10, 10)">
+            <a href="localhost:300">Resend Code</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <script>
+      var timeLeft = 30;
+      var elem = document.getElementById("some_div");
+      var timerId = setInterval(countdown, 1000);
+
+      function countdown() {
+        if (timeLeft == -1) {
+          clearTimeout(timerId);
+          doSomething();
+        } else {
+          elem.innerHTML = timeLeft + " seconds remaining";
+          timeLeft--;
+        }
+      }
+
+      function doSomething() {
+        alert("Time UP");
+      }
+    </script>
+  </body>
+</html>
